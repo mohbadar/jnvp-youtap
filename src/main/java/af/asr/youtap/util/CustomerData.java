@@ -1,5 +1,8 @@
 package af.asr.youtap.util;
 
+import lombok.Data;
+
+@Data
 public class CustomerData {
 
     /**
@@ -88,6 +91,10 @@ public class CustomerData {
     private String cardExpiry;
 
     /**
+     * contact phone for subscriber
+     */
+    private String contactPhone;
+    /**
      * Customer Type
      */
     private CustomerType customerType;
@@ -100,6 +107,10 @@ public class CustomerData {
      */
     private  String idVarified;
 
+    /**
+     * Customer Gender (M or F)
+     */
+    private String gender;
     /**
      * New mobile money account PIN for a PIN
      * change. In production systems this is
@@ -143,5 +154,23 @@ public class CustomerData {
      * ‘U’ – Unlink account
      */
     private LinkType linkType;
+
+    private CustomerData(Builder builder)
+    {
+        
+    }
+
+    public static class Builder {
+
+
+
+
+    }
+
+
+    public String getCustomerData()
+    {
+        return String.format("BankAccountNo=%s, MobMonPin=%d, BankPin=%d, EmailAddress=%s, ResidentialAddress=%s, State=%s, City=%s, Country=%s, NFCTagId=%sو GivenName=%s, Surname=%s, DOB=%s, CustomerId=%s, MSISDN=%s, CardId=%s, CardExpiry=%s, ContactPhone=%s, Gender=%s, CustomerType=%sو IdVerified=%s, NewMobMonPin=%s, FingerData1=%s, FingerData2=%s, FingerData3=%s, LinkType=%s", this.bankAccountNo, this.mobMonPin, this.bankPin, this.emailAddress, this.residentialAddress, this.state, this.city, this.country, this.NFCTagId, this.givenName, this.surename, this.dob, this.customerId, this.msisdn, this.cardId, this.cardExpiry, this.contactPhone, this.gender, this.customerType, this.idVarified, this.newMobMonPin, this.fingerData1, this.fingerData2, this.fingerData3, this.linkType);
+    }
 
 }
