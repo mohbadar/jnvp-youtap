@@ -6,4 +6,6 @@ public interface YoutapMessageTypes {
     public static String MERCHANT_LOGIN_RESPONSE = "MerchantLoginResp";
     public static String STAFF_LOGIN_REQUEST = "StaffLogin";
     public static String STAFF_LOGIN_RESPONSE = "StaffLoginResp";
+    public static String MINI_STATEMENT_REQUEST = "LastTransactions";
+    public static String MINI_STATEMENT_RESPONSE = "LastTransactionResp";
 }
