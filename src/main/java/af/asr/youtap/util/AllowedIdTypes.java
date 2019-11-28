@@ -16,5 +16,5 @@ package af.asr.youtap.util;
  */
 public interface AllowedIdTypes {
 
-  
+
 }
