@@ -10,8 +10,13 @@ public class MiniStatementRequest {
      * Block number requested. For a large number
      * of transaction more than one block may be
      * needed
+     *
+     * The client request the block number to be
+     * sent. The first block is zero. See
+     * BlockCount returned from the server
+     * 
      */
-    private String requestBlock;
+    private long requestBlock;
 
     private int txnHistoryCount;
     private String customerData;
@@ -39,7 +44,7 @@ public class MiniStatementRequest {
         private String terminalId;
         private String merchantId;
         private String transactionId;
-        private String requestBlock;
+        private long requestBlock;
         private int txnHistoryCount;
         private String customerData;
         private String prnDspFormat;
