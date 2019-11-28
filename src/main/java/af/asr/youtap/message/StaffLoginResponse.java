@@ -49,8 +49,15 @@ public class StaffLoginResponse {
             return this;
         }
 
+        public StaffLoginResponse build(){
+            return new StaffLoginResponse(this);
+        }
 
+    }
 
+    public String getMessage()
+    {
+        return String.format("Status=%d,TransactionId=%s,ProfileTags=%s,MessageType=%s", this.status,  this.transactionId, this.profileTags,this.messageType);
     }
 
 }
