@@ -6,8 +6,8 @@ public class BalanceGetResponse {
     private int status;
     private String transactionId;
     private String dspData;
-    private String balance;
-    private String topupBalance;
+    private Double balance;
+    private Double topupBalance;
 
     public BalanceGetResponse(Builder builder)
     {
@@ -26,8 +26,8 @@ public class BalanceGetResponse {
         private int status;
         private String transactionId;
         private String dspData;
-        private String balance;
-        private String topupBalance;
+        private Double balance;
+        private Double topupBalance;
 
 
 
@@ -49,8 +49,30 @@ public class BalanceGetResponse {
             return this;
         }
 
-        
+        public Builder withDspData(String dspData)
+        {
+            this.dspData = dspData;
+            return this;
+        }
+
+        public Builder withBalance(Double balance)
+        {
+            this.balance = balance;
+            return this;
+        }
+
+        public Builder withTopUpBalance(Double topupBalance)
+        {
+            this.topupBalance = topupBalance;
+            return this;
+        }
+
+        public BalanceGetResponse build()
+        {
+            return new BalanceGetResponse(this);
+        }
     }
 
+    
 
 }
