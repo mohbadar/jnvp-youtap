@@ -73,6 +73,9 @@ public class BalanceGetResponse {
         }
     }
 
-    
+    public String getMessage()
+    {
+        return String.format("Status=%d,TransactionId=%s,Balance=%d,DspData=%s,TopupBalance=%d,MessageType=%s", this.status, this.transactionId, this.balance, this.dspData, this.topupBalance, this.messageType);
+    }
 
 }
