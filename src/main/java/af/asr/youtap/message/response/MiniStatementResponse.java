@@ -52,5 +52,52 @@ public class MiniStatementResponse {
             return new Builder();
         }
 
+
+        public Builder withMessageType(String messageType)
+        {
+            this.messageType = messageType;
+            return this;
+        }
+
+        public Builder withStatus(int status)
+        {
+            this.status = status;
+            return this;
+        }
+
+        public Builder withTransactionId(String transactionId)
+        {
+            this.transactionId = transactionId;
+            return this;
+        }
+
+        public Builder withBlockCount(int blockCount)
+        {
+            this.blockCount = blockCount;
+            return this;
+        }
+
+        public Builder withDspData(String dspData)
+        {
+            this.dspData = dspData;
+            return this;
+        }
+
+        public Builder withPrnData(String prnData)
+        {
+            this.prnData = prnData;
+            return this;
+        }
+
+        public MiniStatementResponse build()
+        {
+            return new MiniStatementResponse(this);
+        }
+
+    }
+
+    public String getMessage()
+    {
+        return String.format("Status=%d,TransactionId=%s,BlockCount=%d,PrnData=%s,MessageType=%s", this.status, this.transactionId, this.blockCount, this.prnData, this.messageType);
     }
 }
