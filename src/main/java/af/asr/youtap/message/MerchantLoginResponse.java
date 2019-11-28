@@ -1,6 +1,4 @@
-package af.asr.youtap.message.merchant;
-
-import lombok.Setter;
+package af.asr.youtap.message;
 
 public class MerchantLoginResponse {
 

@@ -1,4 +1,4 @@
-package af.asr.youtap.message.merchant;
+package af.asr.youtap.message;
 
 public class StaffLoginRequest {
 
