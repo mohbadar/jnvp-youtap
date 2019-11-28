@@ -14,7 +14,7 @@ public class MiniStatementRequest {
      * The client request the block number to be
      * sent. The first block is zero. See
      * BlockCount returned from the server
-     * 
+     *
      */
     private long requestBlock;
 
@@ -76,7 +76,7 @@ public class MiniStatementRequest {
         }
 
 
-        public Builder withRequestBlock(String requestBlock)
+        public Builder withRequestBlock(long requestBlock)
         {
             this.requestBlock = requestBlock;
             return this;
@@ -110,7 +110,7 @@ public class MiniStatementRequest {
 
     public String getMessage()
     {
-        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,TxnHistoryCount=%d,PrnDspFormat=P,RequestBlock=0,CustomerData=(NFCTagId=04E8550ABA2980D0,MobMonPin=655321)");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,TxnHistoryCount=%d,PrnDspFormat=P,RequestBlock=%d,CustomerData=%d", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.txnHistoryCount, this.prnDspFormat, this.requestBlock, this.customerData);
     }
 
 }
