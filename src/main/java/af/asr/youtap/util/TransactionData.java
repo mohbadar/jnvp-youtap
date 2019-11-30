@@ -89,7 +89,40 @@ public class TransactionData {
      */
     private long paymentTrailId;
 
-    
+    /**
+     * Three character ISO4217 currency code
+     * If a source and destination currency is
+     * used this holds the currency that the
+     * amount was entered in
+     */
+    private int workingCurrency;
+
+    /**
+     * Transaction amount in the specified
+     * currency
+     */
+    private double workingAmount;
+
+    private TransactionData(Builder builder)
+    {
+        this.transactionType = builder.transactionType;
+    }
+
+    public static class Builder{
+
+        private String transactionType;
+        private String TransactionDate;
+        private int status;
+        private String searchTxnMessage;
+        private String customerId;
+        private String merchantId;
+        private String paymentType;
+        private long paymentTrailId;
+        private int workingCurrency;
+        private double workingAmount;
+
+
+    }
 
 
 }
