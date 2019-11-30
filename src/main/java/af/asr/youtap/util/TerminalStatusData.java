@@ -63,6 +63,19 @@ public class TerminalStatusData {
     private String simId;
 
 
+    private TerminalStatusData(Builder builder)
+    {
+        this.batteryLevel = builder.batteryLevel;
+        this.averageMessageRoundTrip = builder.averageMessageRoundTrip;
+        this.maxMessageRoundTrip = builder.maxMessageRoundTrip;
+        this.minMessageRoundTrip = builder.minMessageRoundTrip;
+        this.signalStrength = builder.signalStrength;
+        this.imsi = builder.imsi;
+        this.imei = builder.imei;
+        this.simId  =builder.simId;
+        this.serviceOperator = builder.serviceOperator;
+    }
+
     public static class Builder {
 
         /**
@@ -131,6 +144,8 @@ public class TerminalStatusData {
             return new Builder();
         }
 
+
+        
     }
 
 }
