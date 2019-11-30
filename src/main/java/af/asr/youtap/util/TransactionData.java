@@ -13,7 +13,7 @@ public class TransactionData {
      * Last financial transaction’s date and time
      * YYYY MMDDhhmmss
      */
-    private String TransactionDate;
+    private String transactionDate;
 
     /**
      *  *Status code values 2 and 3 are displayed
@@ -106,12 +106,21 @@ public class TransactionData {
     private TransactionData(Builder builder)
     {
         this.transactionType = builder.transactionType;
+        this.transactionDate = builder.transactionDate;
+        this.status = builder.status;
+        this.searchTxnMessage = builder.searchTxnMessage;
+        this.customerId = builder.customerId;
+        this.merchantId = builder.merchantId;
+        this.paymentType = builder.paymentType;
+        this.paymentTrailId = builder.paymentTrailId;
+        this.workingCurrency = builder.workingCurrency;
+        this.workingAmount = builder.workingAmount;
     }
 
     public static class Builder{
 
         private String transactionType;
-        private String TransactionDate;
+        private String transactionDate;
         private int status;
         private String searchTxnMessage;
         private String customerId;
