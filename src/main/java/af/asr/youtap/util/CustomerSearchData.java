@@ -97,6 +97,37 @@ public class CustomerSearchData {
             return  this;
         }
 
+        public Builder withGivenName(String givenName)
+        {
+            this.givenName = givenName;
+            return this;
+        }
+
+        public Builder withSureName(String sureName)
+        {
+            this.surename = sureName;
+            return this;
+        }
+
+        public Builder withCustomerId(String customerId)
+        {
+            this.customerId = customerId;
+            return this;
+        }
+
+        public Builder withMSISDN(String msisdn)
+        {
+            this.msisdn = msisdn;
+            return this;
+        }
+
+        public Builder withCardId(String cardId)
+        {
+            this.cardId = cardId;
+            return this;
+        }
+
+        public 
 
     }
 
