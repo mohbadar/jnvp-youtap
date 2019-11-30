@@ -29,5 +29,52 @@ public class MerchantChangePinRequest {
         private int merchantPin;
         private int newPin;
 
+
+        public static Builder newInstance(){
+            return  new Builder();
+        }
+
+
+        public Builder withMessageType(String messageType){
+            this.messageType= messageType;
+            return this;
+        }
+
+        public Builder withTerminalId(String terminalId){
+            this.terminalId = terminalId;
+            return this;
+        }
+
+        public Builder withMerchantId(String merchantId){
+            this.merchantId = merchantId;
+            return this;
+        }
+
+        public Builder withTransactionId(String transactionId)
+        {
+            this.transactionId = transactionId;
+            return this;
+        }
+
+        public Builder withMerchantPin(int merchantPin)
+        {
+            this.merchantPin = merchantPin;
+            return this;
+        }
+
+
+
+        public Builder withNewPin(int newPin)
+        {
+            this.newPin = newPin;
+            return this;
+        }
+
+        public MerchantChangePinRequest build()
+        {
+            return new MerchantChangePinRequest(this);
+        }
+
+
     }
 }
