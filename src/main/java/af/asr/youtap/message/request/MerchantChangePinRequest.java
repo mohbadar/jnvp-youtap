@@ -74,7 +74,10 @@ public class MerchantChangePinRequest {
         {
             return new MerchantChangePinRequest(this);
         }
+    }
 
-
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,MerchantId=%s,TransactionId=%s,TerminalId=%s,MerchantPin=%d,NewPin=%d", this.messageType, this.merchantId, this.transactionId, this.terminalId, this.merchantPin, this.newPin);
     }
 }
