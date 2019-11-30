@@ -10,6 +10,16 @@ public class CustomerResetPinRequest {
     private String fingerData;
 
 
+    public CustomerResetPinRequest(Builder builder)
+    {
+        this.messageType = builder.messageType;
+        this.terminalId = builder.terminalId;
+        this.merchantId = builder.merchantId;
+        this.transactionId = builder.transactionId;
+        this.customerData = builder.customerData;
+        this.fingerData = builder.fingerData;
+    }
+
     public static class Builder {
 
 
