@@ -8,4 +8,12 @@ public class TransactionData {
      * MERCHANTTRANSACTION
      */
     private String transactionType;
+
+    /**
+     * Last financial transaction’s date and time
+     * YYYY MMDDhhmmss
+     */
+    private String TransactionDate;
+
+    private String
 }
