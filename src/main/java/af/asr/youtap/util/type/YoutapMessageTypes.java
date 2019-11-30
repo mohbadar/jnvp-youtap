@@ -18,4 +18,6 @@ public interface YoutapMessageTypes {
     public static String CUSTOMER_CHANGE_PIN_RESPONSE = "ChangeCustomerPinResp";
     public static String CUSTOMER_RESET_PIN_REQUEST  = "ResetPin";
     public static String CUSTOMER_RESET_PIN_RESPONSE  ="ResetPinResp";
+    public static String CUSTOMER_TRANSACTION_REQUEST  ="CustomerTransaction";
+    public static String CUSTOMER_TRANSACTION_RESPONSE = "CustomerTransactionResp";
 }
