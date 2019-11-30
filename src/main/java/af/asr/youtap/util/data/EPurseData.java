@@ -11,6 +11,15 @@ public class EPurseData {
     private String ePurseCounter;
 
 
+    public EPurseData(Builder builder)
+    {
+        this.ePurseId = builder.ePurseId;
+        this.ePurseCurrency = builder.ePurseCurrency;
+        this.ePurseBalance = builder.ePurseBalance;
+        this.ePurseCounter = builder.ePurseCounter;
+    }
+
+
     public static class Builder{
 
 
@@ -18,6 +27,13 @@ public class EPurseData {
         private String ePurseCurrency;
         private String ePurseBalance;
         private String ePurseCounter;
+
+        public static Builder newInstance()
+        {
+            return new Builder();
+        }
+
+        
 
 
     }
