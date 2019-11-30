@@ -30,8 +30,28 @@ public class AuthData {
         {
             return new Builder();
         }
-        
 
+        public Builder addToCTALAmount(String name, Double amount)
+        {
+            this.CTALAmount.put(name, amount);
+            return this;
+        }
+
+        public Builder addToCTALId(String name, Double amount)
+        {
+            this.CTALId.put(name, amount);
+            return this;
+        }
+
+        public AuthData build()
+        {
+            return new AuthData(this);
+        }
+    }
+
+    public String getData()
+    {
+        return String.format("");
     }
 
 
