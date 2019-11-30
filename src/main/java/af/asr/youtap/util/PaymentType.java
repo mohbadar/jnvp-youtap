@@ -1,5 +1,46 @@
 package af.asr.youtap.util;
 
+/**
+ * DMM – send money or Forex lookup
+ * TOPUP – Topup
+ * BILL – Bill payment
+ * Merchant local transactions:
+ * C2MP – (payment) money transfer from a
+ * customer’s mobile money account to a
+ * merchants account
+ * C2MW – (withdrawal) money transfer from
+ * a customer’s mobile money account to a
+ * merchants account
+ * C2MD – cash deposit from customer to
+ * merchant
+ * C2CW – transfer from a customer’s mobile
+ * money account to the customers linked
+ * bank account
+ * C2CD – transfer from a customer’s linked
+ * bank account to a customer’s mobile
+ * money account
+ * M2CT – Subscriber uses mobile money
+ * account to purchase mobile phone airtime
+ * top-up.
+ * PINTOP– Subscriber uses mobile money
+ * account to purchase mobile phone airtime
+ * top-up voucher/PIN.
+ * SNDMON – Subscriber uses mobile
+ * money account to send money to other
+ * subscribers or non-subscribers
+ * CSHTOP – Subscriber uses Cash to send
+ * mobile phone airtime to any mobile phone
+ * user including himself/herself
+ * CSHVOUT - Subscriber transfers a cash
+ * amount to a non-mobile money subscriber
+ * CSHVOUR – Non-mobile money wishes to
+ * withdraw from a cash amount previously
+ * transferred to him/her.
+ * CP2MP – Prepaid card purchase
+ * INTXF – Mei Tan
+ * OUTTXF - Mei Tan
+ * C2CD - Mei Tan
+ */
 public interface   PaymentType {
     /**
      * send money or Forex lookup
