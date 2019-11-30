@@ -24,6 +24,15 @@ public class EndDayReportRequest {
      */
     private int requestBlock;
 
+    private int txnHistoryCount;
+    private String customerData;
+    /**
+     * The format that the data needs to be
+     * returned in
+     */
+    private String prnDspFormat;
+
+
 
     public EndDayReportRequest(Builder builder)
     {
@@ -33,6 +42,9 @@ public class EndDayReportRequest {
         this.merchantPin = builder.merchantPin;
         this.requestBlock = builder.requestBlock;
         this.transactionId = builder.transactionId;
+        this.txnHistoryCount = builder.txnHistoryCount;
+        this.customerData = builder.customerData;
+        this.prnDspFormat =builder.prnDspFormat;
     }
 
     public static class Builder {
@@ -43,9 +55,17 @@ public class EndDayReportRequest {
         private String transactionId;
         private int merchantPin;
         private int requestBlock;
+        private int txnHistoryCount;
+        private String customerData;
+        private String prnDspFormat;
 
 
 
+        public static Builder newInstance()
+        {
+            return new Builder();
+        }
+        
 
     }
 
