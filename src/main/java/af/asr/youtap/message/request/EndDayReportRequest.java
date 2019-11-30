@@ -65,9 +65,64 @@ public class EndDayReportRequest {
         {
             return new Builder();
         }
-        
+
+        public Builder withMessageType(String messageType){
+            this.messageType= messageType;
+            return this;
+        }
+
+        public Builder withTerminalId(String terminalId){
+            this.terminalId = terminalId;
+            return this;
+        }
+
+        public Builder withMerchantId(String merchantId){
+            this.merchantId = merchantId;
+            return this;
+        }
+
+        public Builder withTransactionId(String transactionId)
+        {
+            this.transactionId = transactionId;
+            return this;
+        }
+
+
+        public Builder withRequestBlock(long requestBlock)
+        {
+            this.requestBlock = requestBlock;
+            return this;
+        }
+
+        public Builder withTxnHistoryCount(int txnHistoryCount)
+        {
+            this.txnHistoryCount = txnHistoryCount;
+            return this;
+        }
+
+
+        public Builder withCustomerData(String customerData)
+        {
+            this.customerData = customerData;
+            return this;
+        }
+
+
+        public Builder withPrnDspFormat(String prnDspFormat)
+        {
+            this.prnDspFormat = prnDspFormat;
+            return this;
+        }
+
+        public EndDayReportRequest build(){
+            return new EndDayReportRequest(this);
+        }
 
     }
 
+    public String getMessage()
+    {
+        return String.format("");
+    }
 
 }
