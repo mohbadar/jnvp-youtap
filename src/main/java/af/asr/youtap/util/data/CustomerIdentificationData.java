@@ -131,6 +131,59 @@ public class CustomerIdentificationData {
             this.idType = idType;
             return this;
         }
+
+
+        public Builder withIdName(String idName)
+        {
+            this.idName = idName;
+            return this;
+        }
+
+
+
+
+        public Builder withIdIssue(String idIssue)
+        {
+            this.idIssue = idIssue;
+            return this;
+        }
+
+
+
+
+        public Builder withIdIssuerName(String idIssuerName)
+        {
+            this.idIssuerName = idIssuerName;
+            return this;
+        }
+
+        public Builder withIdCountry(String idCountry)
+        {
+            this.idCountry = idCountry;
+            return this;
+        }
+
+        public Builder withIdExpiry(String idExpiry)
+        {
+            this.idExpiry = idExpiry;
+            return this;
+        }
+
+        public Builder withIdNumber(String idNumber)
+        {
+            this.idNumber = idNumber;
+            return this;
+        }
+
+        public CustomerIdentificationData build()
+        {
+            return new CustomerIdentificationData(this);
+        }
+    }
+
+    public String getMessage()
+    {
+        return String.format("");
     }
 
 }
