@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - Terminal Status Data"
+git commit -m "Youtap Library - Auth Data"
