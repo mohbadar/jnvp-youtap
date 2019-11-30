@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - Merchant Change PIN REQUEST"
+git commit -m "Youtap Library - Customer Change PIN REQUEST"
