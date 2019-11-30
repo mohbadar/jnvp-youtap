@@ -39,6 +39,57 @@ public class RegisterTagRequest {
         private String replacingTagType;
         private String customerSearchData;
 
+        public static Builder newInstance(){
+            return new Builder();
+        }
+
+        public Builder withMessageType(String messageType){
+            this.messageType= messageType;
+            return this;
+        }
+
+        public Builder withTerminalId(String terminalId){
+            this.terminalId = terminalId;
+            return this;
+        }
+
+        public Builder withMerchantId(String merchantId){
+            this.merchantId = merchantId;
+            return this;
+        }
+
+        public Builder withTransactionId(String transactionId)
+        {
+            this.transactionId = transactionId;
+            return this;
+        }
+
+
+        public Builder withTagType(String tagType)
+        {
+            this.tagType = tagType;
+            return this;
+        }
+
+        public Builder withTagOwerName(String tagOwnerName){
+            this.tagOwnerName = tagOwnerName;
+            return this;
+        }
+
+        public Builder withReplacingTagType(String replacingTagType){
+            this.replacingTagType = replacingTagType;
+            return this;
+        }
+
+        public Builder withCustomerSearchData(String customerSearchData){
+            this.customerSearchData = customerSearchData;
+            return this;
+        }
+
+        public RegisterTagRequest build(){
+            return new RegisterTagRequest(this);
+        }
+
     }
 
 
