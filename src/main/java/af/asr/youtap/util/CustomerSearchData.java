@@ -127,8 +127,33 @@ public class CustomerSearchData {
             return this;
         }
 
-        public 
+        public Builder withCardExpiry(String cardExpiry)
+        {
+            this.cardExpiry = cardExpiry;
+            return this;
+        }
 
+        public Builder withMobMonPin(int mobMonPin){
+            this.mobMonPin = mobMonPin;
+            return this;
+        }
+
+        public Builder withIMSI(String imsi)
+        {
+            this.imsi = imsi;
+            return this;
+        }
+
+        public CustomerSearchData build()
+        {
+            return new CustomerSearchData(this);
+        }
+
+    }
+
+    public String getData()
+    {
+        return String.format("");
     }
 
 }
