@@ -145,7 +145,63 @@ public class TerminalStatusData {
         }
 
 
-        
+        public Builder withBatteryLevel(int batteryLevel)
+        {
+            this.batteryLevel = batteryLevel;
+            return this;
+        }
+
+        public Builder withAverageMessageRoundTrip(double averageMessageRoundTrip)
+        {
+            this.averageMessageRoundTrip = averageMessageRoundTrip;
+            return this;
+        }
+
+        public Builder withMaxMessageRoundTrip(double maxMessageRoundTrip)
+        {
+            this.maxMessageRoundTrip = this.maxMessageRoundTrip;
+            return this;
+        }
+
+        public Builder withMinMessageRoundTrip(double minMessageRoundTrip)
+        {
+            this.minMessageRoundTrip = minMessageRoundTrip;
+            return this;
+        }
+        public Builder withSignalStrength(int signalStrength)
+        {
+            this.signalStrength = signalStrength;
+            return this;
+        }
+
+        public Builder withIMSI(String imsi)
+        {
+            this.imsi =imsi;
+            return this;
+        }
+
+        public Builder withIMEI(String imei)
+        {
+            this.imei = imei;
+            return this;
+        }
+
+        public Builder withServiceOperator(String serviceOperator)
+        {
+            this.serviceOperator = serviceOperator;
+            return this;
+        }
+
+        public TerminalStatusData build()
+        {
+            return new TerminalStatusData(this);
+        }
+
+    }
+
+    public String getData()
+    {
+        return String.format("");
     }
 
 }
