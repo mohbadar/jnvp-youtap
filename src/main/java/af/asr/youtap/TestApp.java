@@ -4,7 +4,7 @@ package af.asr.youtap;
 import af.asr.youtap.message.request.MerchantLoginRequest;
 import af.asr.youtap.message.response.MerchantLoginResponse;
 import af.asr.youtap.message.request.StaffLoginRequest;
-import af.asr.youtap.util.YoutapMessageTypes;
+import af.asr.youtap.util.type.YoutapMessageTypes;
 
 public class TestApp {
 

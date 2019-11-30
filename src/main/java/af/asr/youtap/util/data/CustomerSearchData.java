@@ -1,4 +1,4 @@
-package af.asr.youtap.util;
+package af.asr.youtap.util.data;
 
 public class CustomerSearchData {
 

@@ -1,5 +1,7 @@
-package af.asr.youtap.util;
+package af.asr.youtap.util.data;
 
+import af.asr.youtap.util.type.CustomerType;
+import af.asr.youtap.util.type.LinkType;
 import lombok.Data;
 
 @Data
