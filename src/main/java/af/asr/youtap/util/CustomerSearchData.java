@@ -86,6 +86,18 @@ public class CustomerSearchData {
         private String imsi;
 
 
+        public static Builder newInstance()
+        {
+            return new Builder();
+        }
+
+        public Builder withNFCTagId(String NFCTagId)
+        {
+            this.NFCTagId = NFCTagId;
+            return  this;
+        }
+
+
     }
 
 }
