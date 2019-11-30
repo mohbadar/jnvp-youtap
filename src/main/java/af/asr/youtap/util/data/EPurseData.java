@@ -2,6 +2,11 @@ package af.asr.youtap.util.data;
 
 /**
  * Aggregation of purse information extracted or to be written on the purse card.
+ *
+ * Example:
+ *
+ * EPurseData=(EPurseId=39BD361E,EPurseCurrency=IDR,EPurseBalance=95807,EPurseCounter=
+ * 7ffffff0)
  */
 public class EPurseData {
 
