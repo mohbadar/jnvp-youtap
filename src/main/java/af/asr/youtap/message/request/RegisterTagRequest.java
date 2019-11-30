@@ -28,7 +28,18 @@ public class RegisterTagRequest {
     private String customerSearchData;
 
 
-    
+    public static class Builder {
+
+        private String messageType;
+        private String terminalId;
+        private String merchantId;
+        private String transactionId;
+        private String tagType;
+        private String tagOwnerName;
+        private String replacingTagType;
+        private String customerSearchData;
+
+    }
 
 
 
