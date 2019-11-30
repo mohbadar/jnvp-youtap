@@ -14,4 +14,6 @@ public interface YoutapMessageTypes {
     public static String REGISTER_TAG_RESPONSE = "RegisterTagResp";
     public static String MERCHANT_CHANGE_PIN_REQUEST = "ChangeMerchantPin";
     public static String MERCHANT_CHANGE_PIN_RESPONSE = "ChangeMerchantPinResp";
+    public static String CUSTOMER_CHANGE_PIN_REQUEST = "ChangeCustomerPin";
+    public static String CUSTOMER_CHANGE_PIN_RESPONSE = "ChangeCustomerPinResp";
 }

@@ -7,6 +7,7 @@ public class CustomerChangePinRequest {
     private String merchantId;
     private String transactionId;
     private String customerData;
+    private int merchantPin;
 
 
     private CustomerChangePinRequest(Builder builder)
@@ -16,6 +17,7 @@ public class CustomerChangePinRequest {
         this.merchantId = builder.merchantId;
         this.transactionId = builder.transactionId;
         this.customerData = builder.customerData;
+        this.merchantPin = builder.merchantPin;
     }
 
     public static class Builder {
@@ -25,6 +27,7 @@ public class CustomerChangePinRequest {
         private String merchantId;
         private String transactionId;
         private String customerData;
+        private int merchantPin;
 
 
         public static Builder newInstance(){
@@ -59,6 +62,12 @@ public class CustomerChangePinRequest {
             return this;
         }
 
+        public Builder withMerchantPin(int merchantPin)
+        {
+            this.merchantPin = merchantPin;
+            return this;
+        }
+
         public CustomerChangePinRequest build()
         {
             return new CustomerChangePinRequest(this);
@@ -67,4 +76,8 @@ public class CustomerChangePinRequest {
 
     }
 
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantPin=%s,MerchantId=%s,CustomerData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantPin, this.merchantId, this.customerData);
+    }
 }
