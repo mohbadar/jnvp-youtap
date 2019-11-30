@@ -3,6 +3,11 @@ package af.asr.youtap.util.data;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Contains a number of threshold amounts and required identification records for a single transaction following the
+ * exchange quote. If the transaction amount exceeds the threshold amount the subscriber is prompted to enter the
+ * specified ID.
+ */
 
 public class AuthData {
 
