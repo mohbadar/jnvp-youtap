@@ -88,7 +88,7 @@ public class EndDayReportRequest {
         }
 
 
-        public Builder withRequestBlock(long requestBlock)
+        public Builder withRequestBlock(int requestBlock)
         {
             this.requestBlock = requestBlock;
             return this;
@@ -122,7 +122,7 @@ public class EndDayReportRequest {
 
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,MerchantPin=%d,PrnDspFormat=%s,RequestBlock=%d", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.merchantPin, this.prnDspFormat, this.requestBlock);
     }
 
 }
