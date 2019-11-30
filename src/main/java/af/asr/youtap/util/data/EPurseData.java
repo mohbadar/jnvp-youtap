@@ -33,8 +33,39 @@ public class EPurseData {
             return new Builder();
         }
 
-        
+        public Builder withEPurseId(String ePurseId)
+        {
+            this.ePurseId = ePurseId;
+            return this;
+        }
 
+        public Builder withEPurseCurrency(String ePurseCurrency)
+        {
+            this.ePurseCurrency = ePurseCurrency;
+            return  this;
+        }
 
+        public Builder withEPurseBalance(String ePurseBalance)
+        {
+            this.ePurseBalance = ePurseBalance;
+            return  this;
+        }
+
+        public Builder withEPurseCounter(String ePurseCounter)
+        {
+            this.ePurseCounter = ePurseCounter;
+            return  this;
+        }
+
+        public EPurseData build()
+        {
+            return new EPurseData(this);
+        }
+
+    }
+
+    public String getData()
+    {
+        return String.format("");
     }
 }
