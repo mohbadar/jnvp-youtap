@@ -25,5 +25,29 @@ public class EndDayReportRequest {
     private int requestBlock;
 
 
+    public EndDayReportRequest(Builder builder)
+    {
+        this.messageType= builder.messageType;
+        this.terminalId =builder.terminalId;
+        this.merchantId= builder.merchantId;
+        this.merchantPin = builder.merchantPin;
+        this.requestBlock = builder.requestBlock;
+        this.transactionId = builder.transactionId;
+    }
+
+    public static class Builder {
+
+        private String messageType;
+        private String terminalId;
+        private String merchantId;
+        private String transactionId;
+        private int merchantPin;
+        private int requestBlock;
+
+
+
+
+    }
+
 
 }
