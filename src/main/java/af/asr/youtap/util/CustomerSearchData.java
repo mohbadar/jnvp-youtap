@@ -53,7 +53,39 @@ public class CustomerSearchData {
     /**
      * Another identifier for the customer, used in the context of
      * smart mobile phone application
+     *
+     * Subscriber Identity number
      */
     private String imsi;
+
+    private CustomerSearchData (Builder builder)
+    {
+        this.NFCTagId = builder.NFCTagId;
+        this.givenName = builder.givenName;
+        this.surename = builder.surename;
+        this.dob = builder.dob;
+        this.customerId = builder.customerId;
+        this.msisdn = builder.msisdn;
+        this.cardId = builder.cardId;
+        this.cardExpiry = builder.cardExpiry;
+        this.mobMonPin = builder.mobMonPin;
+        this.imsi = builder.imsi;
+    }
+
+    public static class Builder {
+
+        private String NFCTagId;
+        private String givenName;
+        private String surename;
+        public String dob;
+        private String customerId;
+        private String msisdn;
+        private String cardId;
+        private String cardExpiry;
+        private int mobMonPin;
+        private String imsi;
+
+
+    }
 
 }
