@@ -28,6 +28,18 @@ public class RegisterTagRequest {
     private String customerSearchData;
 
 
+    public RegisterTagRequest(Builder builder)
+    {
+        this.messageType = builder.messageType;
+        this.terminalId = builder.terminalId;
+        this.merchantId = builder.merchantId;
+        this.transactionId = builder.transactionId;
+        this.tagType = builder.tagType;
+        this.tagOwnerName = builder.tagOwnerName;
+        this.replacingTagType = builder.replacingTagType;
+        this.customerSearchData = builder.customerSearchData;
+    }
+
     public static class Builder {
 
         private String messageType;
