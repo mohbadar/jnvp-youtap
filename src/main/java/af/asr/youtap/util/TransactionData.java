@@ -131,7 +131,79 @@ public class TransactionData {
         private double workingAmount;
 
 
+        public static Builder newInstance()
+        {
+            return new Builder();
+        }
+
+        public Builder withTransactionType(String transactionType)
+        {
+            this.transactionType = transactionType;
+            return this;
+        }
+
+        public Builder withTransactionDate (String transactionDate)
+        {
+            this.transactionDate = transactionDate;
+            return this;
+        }
+
+        public Builder withStatus(int status)
+        {
+            this.status = status;
+            return this;
+        }
+
+        public Builder withSearchTxnMessage(String searchTxnMessage)
+        {
+            this.searchTxnMessage = searchTxnMessage;
+            return this;
+        }
+
+        public Builder withCustomerId(String customerId)
+        {
+            this.customerId = customerId;
+            return this;
+        }
+
+        public Builder withMerchantId(String merchantId)
+        {
+            this.merchantId = merchantId;
+            return this;
+        }
+
+        public Builder withPaymentType(String paymentType)
+        {
+            this.paymentType = paymentType;
+            return this;
+        }
+
+        public Builder withPaymentTrailId(long paymentTrailId)
+        {
+            this.paymentTrailId = paymentTrailId;
+            return this;
+        }
+
+        public Builder withWorkingCurrency(int workingCurrency)
+        {
+            this.workingCurrency = workingCurrency;
+            return this;
+        }
+
+        public Builder withWorkingAmount(double workingAmount)
+        {
+            this.workingAmount = workingAmount;
+            return this;
+        }
+
+        public TransactionData build()
+        {
+            return new TransactionData(this);
+        }
     }
 
-
+    public String getData()
+    {
+        return String.format("");
+    }
 }
