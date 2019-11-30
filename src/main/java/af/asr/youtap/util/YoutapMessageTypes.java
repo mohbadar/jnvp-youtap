@@ -10,4 +10,6 @@ public interface YoutapMessageTypes {
     public static String MINI_STATEMENT_RESPONSE = "LastTransactionResp";
     public static String DAY_END_REPORT_REQUEST = "DayEndReport";
     public static String DAY_END_REPORT_RESPONSE = "DayEndReportResp";
+    public static String REGISTER_TAG_REQUEST= "RegisterTag";
+    public static String REGISTER_TAG_RESPONSE = "RegisterTagResp";
 }
