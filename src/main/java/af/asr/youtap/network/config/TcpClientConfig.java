@@ -1,4 +1,4 @@
-package af.asr.youtap.network.client;
+package af.asr.youtap.network.config;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationEventPublisher;
