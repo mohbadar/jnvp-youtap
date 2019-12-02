@@ -68,7 +68,7 @@ public class CustomerTransactionRequest {
             return this;
         }
 
-        public Builder withCustomerData(String customerSearchData)
+        public Builder withCustomerSearchData(String customerSearchData)
         {
             this.customerSearchData = customerSearchData;
             return this;
