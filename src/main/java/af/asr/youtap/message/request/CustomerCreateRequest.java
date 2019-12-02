@@ -64,4 +64,21 @@ public class CustomerCreateRequest {
             return new CustomerCreateRequest(this);
         }
     }
+
+    /**
+     * Request Example:
+     * • Command Message Subscriber:
+     * MessageType=CustomerCreate,TransactionId=0000000015,TerminalId=98944138,Merc
+     * hantId=021333333,CustomerData=(GivenName=JOE,SurName=BLOGGS,DOB=19801225,Con
+     * tactPhone=64211883899,MobMonPin=1236,CustomerType=SUBSCRIBER)
+     * • Command Message Merchant:
+     * MessageType=CustomerCreate,TransactionId=0000000062,TerminalId=98944138,Merc
+     * hantId=021333333,CustomerData=(GivenName=CM,SurName=DME,DOB=19750303,Contact
+     * Phone=64211773281,MobMonPin=1234,CustomerType=MERCHANT,AssignedTid=98911111)
+     * @return create customer message
+     */
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerData);
+    }
 }
