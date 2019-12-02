@@ -1,5 +1,6 @@
-package af.asr.youtap.network.heartbeat;
+package af.asr.youtap.network.config;
 
+import af.asr.youtap.network.client.HeartbeatClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

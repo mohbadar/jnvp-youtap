@@ -1,7 +1,6 @@
-package af.asr.youtap.network.heartbeat;
+package af.asr.youtap.network.client;
 
 import lombok.extern.slf4j.Slf4j;
-import org.apache.logging.log4j.LogManager;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.Message;
