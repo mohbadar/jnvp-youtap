@@ -6,6 +6,7 @@ public class CustomerSearchRequest {
     private String merchantId;
     private String transactionId;
     private String customerSearchData;
+    private String terminalId;
 
     private CustomerSearchRequest(Builder builder)
     {
@@ -13,6 +14,7 @@ public class CustomerSearchRequest {
         this.merchantId = builder.merchantId;
         this.transactionId = builder.transactionId;
         this.customerSearchData = builder.customerSearchData;
+        this.terminalId = builder.terminalId;
     }
 
 
@@ -23,6 +25,7 @@ public class CustomerSearchRequest {
         private String merchantId;
         private String transactionId;
         private String customerSearchData;
+        private String terminalId;
 
 
         public static Builder newInstance(){
@@ -68,7 +71,6 @@ public class CustomerSearchRequest {
      */
     public String getMessage ()
     {
-        return String.format("MessageType=CustomerSearch,TransactionId=0000000114,TerminalId=98944138,MerchantId=\n" +
-                "021333333,CustomerSearchData=(MSISDN=6421700700)");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerSearchData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerSearchData);
     }
 }
