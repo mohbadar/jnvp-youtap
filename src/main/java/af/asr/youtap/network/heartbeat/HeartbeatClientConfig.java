@@ -1,5 +1,6 @@
 package af.asr.youtap.network.heartbeat;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.integration.channel.DirectChannel;
@@ -18,7 +19,14 @@ import org.springframework.messaging.PollableChannel;
 public class HeartbeatClientConfig {
 
 
+    @Value("${tcp.server.host}")
+    private String host;
 
+    @Value("${tcp.server.port}")
+    private int port;
+
+    @Value("${tcp.client.connection.poolSize}")
+    private int connectionPoolSize;
 
     @Bean
     public MessageChannel outboudChannel() {
@@ -32,7 +40,7 @@ public class HeartbeatClientConfig {
 
     @Bean
     public TcpNetClientConnectionFactory connectionFactory() {
-        TcpNetClientConnectionFactory connectionFactory = new TcpNetClientConnectionFactory("localhost", 7777);
+        TcpNetClientConnectionFactory connectionFactory = new TcpNetClientConnectionFactory(host, port);
         return connectionFactory;
     }
 
