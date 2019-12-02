@@ -1,7 +1,9 @@
 package af.asr.youtap.message.request;
 
-import com.sun.org.apache.xpath.internal.operations.String;
 
+/**
+ * Adds subscriber’s identification details after registration.
+ */
 public class IdentificationSubmitRequest {
 
 
@@ -97,5 +99,23 @@ public class IdentificationSubmitRequest {
         }
 
     }
-    
+
+    /**
+     * Request Example:
+     * MessageType=IdentificationSubmit,TransactionId=0000000016,TerminalId=98944138,Merch
+     * antId=021333333,FingerData=464D52002032300000000126000000C0010E00C800C801000208642C
+     * 405E001E9D0040290026AD004035002E2100406600360F008074003AA3008089003AE4004062003EA80
+     * 08080004E9900407A00519F0080CA00514B0040A6005A6000409C005C7000401C005E3400405500622B
+     * 0080990068D80080860069A8004084006DAD0080900072CB0080340074B60080890076B600800A007D4
+     * 400808E007DBA008030008A3600400C00A84B00803500C84C0040C800C83B00807000D2410040D400C5
+     * 3600806100E04F00807600E24100401500E95700407E00E93B0040B000EA3500407900EC4A00407500E
+     * D5500406100F65B00404A0100600080A2010C96004071011C740040C50122250040960132910080BC01
+     * 3299004096014617004091015885000000,CustomerId=64211883899,IdData=(idType=1,idName=J
+     * OE BLOGGS,idNumber=AA1245780923,idCountry=NZ,idExpiry=20150311)
+     * @return
+     */
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,FingerData=%s,CustomerId=%s,IdData=%s, CustomerData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.fingerData, this.customerId, this.idData, this.customerData);
+    }
 }
