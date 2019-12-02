@@ -17,6 +17,9 @@ import org.springframework.messaging.PollableChannel;
 @EnableIntegration
 public class HeartbeatClientConfig {
 
+
+
+
     @Bean
     public MessageChannel outboudChannel() {
         return new DirectChannel();
