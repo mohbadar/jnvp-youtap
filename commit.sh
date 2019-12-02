@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - Merchant Transaction Payment Request - Response"
+git commit -m "Youtap Library - Customer Create Request Message"
