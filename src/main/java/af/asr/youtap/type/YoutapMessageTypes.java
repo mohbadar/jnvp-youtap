@@ -24,4 +24,6 @@ public interface YoutapMessageTypes {
     public static String MERCHANT_TRANSACTION_RESPONSE = "MerchantTransactionResp";
     public static String CUSTOMER_CREATE_REQUEST = "CustomerCreate";
     public static String CUSTOMER_CREATE_RESPONSE = "CustomerCreateResp";
+    public static String CUSTOMER_SEARCH_REQUEST = "CustomerSearch";
+    public static  String CUSTOMER_SEARCH_RESPONSE = "CustomerSearchResp";
 }

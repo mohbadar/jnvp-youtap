@@ -60,4 +60,15 @@ public class CustomerSearchRequest {
 
 
     }
+
+    /**
+     * MessageType=CustomerSearch,TransactionId=0000000114,TerminalId=98944138,MerchantId=
+     * 021333333,CustomerSearchData=(MSISDN=6421700700)
+     * @return
+     */
+    public String getMessage ()
+    {
+        return String.format("MessageType=CustomerSearch,TransactionId=0000000114,TerminalId=98944138,MerchantId=\n" +
+                "021333333,CustomerSearchData=(MSISDN=6421700700)");
+    }
 }
