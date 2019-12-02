@@ -145,4 +145,9 @@ public class MerchantTransactionRequest {
         }
 
     }
+
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,MerchantPin=%d,CustomerSearchData=%s,PaymentType=%s,WorkingCurrency=%s,WorkingAmount=%f", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.merchantPin, this.paymentType, this.workingCurrency, this.workingAmount );
+    }
 }
