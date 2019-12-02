@@ -1,4 +1,4 @@
-package af.asr.youtap.util.data;
+package af.asr.youtap.data;
 
 /**
  * Aggregation of purse information extracted or to be written on the purse card.

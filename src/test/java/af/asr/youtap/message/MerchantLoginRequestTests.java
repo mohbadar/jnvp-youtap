@@ -1,7 +1,7 @@
 package af.asr.youtap.message;
 
 import af.asr.youtap.message.request.MerchantLoginRequest;
-import af.asr.youtap.util.type.YoutapMessageTypes;
+import af.asr.youtap.type.YoutapMessageTypes;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

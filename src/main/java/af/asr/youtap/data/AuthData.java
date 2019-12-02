@@ -1,4 +1,4 @@
-package af.asr.youtap.util.data;
+package af.asr.youtap.data;
 
 import java.util.HashMap;
 import java.util.Map;

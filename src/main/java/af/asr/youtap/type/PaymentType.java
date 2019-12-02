@@ -1,4 +1,4 @@
-package af.asr.youtap.util.type;
+package af.asr.youtap.type;
 
 /**
  * DMM – send money or Forex lookup
