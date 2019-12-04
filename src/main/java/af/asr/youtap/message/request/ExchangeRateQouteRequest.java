@@ -118,4 +118,18 @@ public class ExchangeRateQouteRequest {
             return new ExchangeRateQouteRequest(this);
         }
     }
+
+    /**
+     * Example Request:
+     *
+     * MessageType=ExchangeQuotation,TransactionId=0000000964,TerminalId=21908856,Merchant
+     * Id=86637,CustomerId=86637,PaymentType=DMM,SourceCurrency=NZD,DestinationCurrency=DT
+     * OP,WorkingCurrency=NZD,WorkingAmount=1.00
+     *
+     * @return
+     */
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerId=%s,PaymentType=%s,SourceCurrency=%s,DestinationCurrency=%s,WorkingCurrency=%s,WorkingAmount=%f, CustomerData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerId, this.paymentType, this.sourceCurrency, this.destinationCurrency, this.workingCurrency, this.workingAmount, this.customerData);
+    }
 }
