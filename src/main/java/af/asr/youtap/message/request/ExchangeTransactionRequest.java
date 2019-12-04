@@ -1,5 +1,8 @@
 package af.asr.youtap.message.request;
 
+import java.time.LocalDate;
+import java.util.Date;
+
 public class ExchangeTransactionRequest {
 
     private String messageType;
@@ -20,6 +23,7 @@ public class ExchangeTransactionRequest {
     private String billPayeeId;
     private String billPayeeReference;
     private String contactMSISDN;
+    private double workingAmount;
 
 
     public ExchangeTransactionRequest(Builder builder)
@@ -42,6 +46,7 @@ public class ExchangeTransactionRequest {
         this.billPayeeId = builder.billPayeeId;
         this.billPayeeReference = builder.billPayeeReference;
         this.contactMSISDN = builder.contactMSISDN;
+        this.workingAmount = builder.workingAmount;
     }
 
 
@@ -65,6 +70,7 @@ public class ExchangeTransactionRequest {
         private String billPayeeId;
         private String billPayeeReference;
         private String contactMSISDN;
+        private double workingAmount;
 
 
         public static Builder newInstance(){
@@ -160,6 +166,13 @@ public class ExchangeTransactionRequest {
             return this;
         }
 
+        public Builder withWorkingAmount(double workingAmount)
+        {
+            this.workingAmount = workingAmount;
+            return this;
+        }
+
+
         public Builder withBillPayeeId(String billPayeeId)
         {
             this.billPayeeId = billPayeeId;
@@ -184,9 +197,33 @@ public class ExchangeTransactionRequest {
         }
     }
 
+    /**
+     * Request Example:
+     * •
+     * Command Message (Send Money):
+     * MessageType=ExchangeTransaction,Date=06/03/2013,Time=12:38:04,TransactionId=
+     * 0000000017,TerminalId=98378273,MerchantId=86637,StaffPin=123,CustomerId=8671
+     * 7,PaymentType=DMM,SourceCurrency=NZD,DestinationCurrency=DFJD,WorkingCurrenc
+     * y=NZD,WorkingAmount=1.00,SendingAmountExclFees=1.0,FxRate=1.3080636,Fee=5.0,
+     * CostToSend=6.0,ReceivedAmount=1.31,ContactMsisdn=6797012106
+     *
+     *
+     *
+     * Command Message (Pay Bill):
+     * MessageType=ExchangeTransaction,TransactionId=0000000019,TerminalId=98378273
+     * ,MerchantId=86637,StaffPin=123,CustomerId=86717,PaymentType=BILL,SourceCurre
+     * ncy=NZD,DestinationCurrency=DFJD,WorkingCurrency=NZD,WorkingAmount=1.00,Send
+     * ingAmountExclFees=1.0,FxRate=1.3080636,Fee=5.0,CostToSend=6.0,ReceivedAmount
+     * =1.31,ContactMsisdn=6797095009,BillPayeeID=99,BillPayeeReference=12345678901
+     * 2
+     * @return
+     */
     public String getMessage()
     {
-        return  String.format("");
+        LocalDate now = LocalDate.now();
+        String date = String.format("%d/%d/%d", now.getDayOfMonth(), now.getMonthValue(), now.getYear());
+
+        return  String.format("MessageType=%s,Date=%s,Time=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,StaffPin=%s,CustomerId=%s,PaymentType=%s,SourceCurrency=%s,DestinationCurrency=%s,WorkingCurrency=%s,WorkingAmount=%s,SendingAmountExclFees=%f,FxRate=%s,Fee=%s,CostToSend=%s,ReceivedAmount%f,ContactMsisdn=%s", this.messageType, date, "", this.transactionId, this.terminalId, this.merchantId, this.staffPin, this.customerId, this.paymentType, this.sourceCurrency, this.destinationCurrency, this.workingCurrency, this.workingAmount, this.sendingAmountExclFees, this.fxRate, this.fee, this.costToSend, this.receiveAmount, this.contactMSISDN );
     }
 
 }

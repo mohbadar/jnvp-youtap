@@ -30,4 +30,6 @@ public interface YoutapMessageTypes {
     public static String IDENTIFICATION_SUBMIT_RESPONSE = "IdentificationSubmitResp";
     public static String EXCHANGE_RATE_QOUTE_REQUEST = "ExchangeQuotation";
     public static String EXCHANGE_RATE_QOUTE_RESPONSE  = "ExchangeQuotationResp";
+    public static String EXCHANGE_TRANSACTION_REQUEST = "ExchangeTransaction";
+    public static String EXCHANGE_TRANSACTION_RESPONSE = "ExchangeTransactionResp";
 }
