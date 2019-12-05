@@ -38,4 +38,8 @@ public interface YoutapMessageTypes {
     public static String CUSTOMER_UPDATE_RESPONSE ="CustomerUpdateDataResp";
     public static String CUSTOMER_ADDITIONAL_DATA_REQUEST = "CustomerAdditionalData";
     public static String CUSTOMER_ADDITIONAL_DATA_RESPONSE = "CustomerAdditionalDataResp";
+    public static String LINK_ACCOUNT_REQUEST = "LinkAccount";
+    public static String LINK_ACCOUNT_RESPONSE = "LinkAccountResp";
+    public static String CUSTOMER_LOGIN_REQUEST ="CustomerLogin";
+    public static String CUSTOMER_LOGIN_RESPONSE ="CustomerLoginResp";
 }

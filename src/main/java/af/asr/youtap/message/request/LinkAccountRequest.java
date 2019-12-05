@@ -15,8 +15,16 @@ public class LinkAccountRequest {
     private String transactionId;
     private String customerData;
 
+    /**
+     * MessageType=LinkAccount,TransactionId=0000000086,TerminalId=98944138,MerchantId=021
+     * 333333,CustomerData=(BankAccountNo=1234567890000,LinkType=L,MobMonPin=1234,BankPin=
+     * 5678,NFCTagId=0493F222BD26803C)
+     * @return
+     */
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=LinkAccount,TransactionId=0000000086,TerminalId=98944138,MerchantId=021\n" +
+                "333333,CustomerData=(BankAccountNo=1234567890000,LinkType=L,MobMonPin=1234,BankPin=\n" +
+                "5678,NFCTagId=0493F222BD26803C)");
     }
 }
