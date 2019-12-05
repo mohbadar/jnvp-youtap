@@ -35,8 +35,6 @@ public class CustomerUpdateRequest {
      */
     public String getMessage()
     {
-        return String.format("MessageType=CustomerUpdate,TransactionId=0000000011,TerminalId=98944138,MerchantId=\n" +
-                "021333333,CustomerData=(GivenName=M,SurName=E,DOB=19720403,MSISDN=64211773279,Email\n" +
-                "Address=ME@YOUTAP.COM,CustomerId=64211773279),FingerData=%s");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerData=%s,FingerData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerData, this.fingerData);
     }
 }
