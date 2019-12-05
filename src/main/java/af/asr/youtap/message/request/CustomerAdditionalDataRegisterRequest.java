@@ -14,10 +14,12 @@ public class CustomerAdditionalDataRegisterRequest {
     private String merchantId;
     private String transactionId;
     private String customerData;
+    private String subscriberAddress;
+    private String app;
 
 
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerData=%s,SubscriberAddress=%s,App=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerData, this.subscriberAddress, this.app);
     }
 }
