@@ -50,4 +50,7 @@ public interface YoutapMessageTypes {
     public static String EPURSE_CHECK_RESPONSE ="EPurseCheckResp";
     public static String EPURSE_TRANSACTION_REQUEST = "EPurseTransaction";
     public static String EPURSE_TRANSACTION_RESPONSE = "EPurseTransactionResp";
+    public static String MIFARE_CARD_WRITE_NOTIFICATION_REQUEST ="MifCardWriteNotification";
+    public static String MIFARE_CARD_WRITE_NOTIFICATION_RESPONSE ="MifCardWriteNotification";
+
 }

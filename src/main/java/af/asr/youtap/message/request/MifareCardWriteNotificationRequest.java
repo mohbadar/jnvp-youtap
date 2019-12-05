@@ -34,6 +34,8 @@ public class MifareCardWriteNotificationRequest {
      */
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=MifCardWriteNotification,TransactionId=0000000030,TerminalId=98378265,M\n" +
+                "erchantId=8888888888888,CardType=MIFARECLASSIC,Context=MEePurse,CustomerData=(NFCTa\n" +
+                "gId=521BFD5B),WriteReference=5976024341534212105,CommandStatus=NOTOK");
     }
 }
