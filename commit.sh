@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - Customer Update Request Message"
+git commit -m "Youtap Library - Register additional Customer Data Request Message"

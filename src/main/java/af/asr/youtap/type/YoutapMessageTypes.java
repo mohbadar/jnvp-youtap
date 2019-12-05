@@ -36,4 +36,6 @@ public interface YoutapMessageTypes {
     public static String TRANSACTION_SEARCH_RESPONSE = "TransactionSearchResp";
     public static String CUSTOMER_UPDATE_REQUEST = "CustomerUpdate";
     public static String CUSTOMER_UPDATE_RESPONSE ="CustomerUpdateDataResp";
+    public static String CUSTOMER_ADDITIONAL_DATA_REQUEST = "CustomerAdditionalData";
+    public static String CUSTOMER_ADDITIONAL_DATA_RESPONSE = "CustomerAdditionalDataResp";
 }
