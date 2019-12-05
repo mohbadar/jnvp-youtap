@@ -54,5 +54,7 @@ public interface YoutapMessageTypes {
     public static String MIFARE_CARD_WRITE_NOTIFICATION_RESPONSE ="MifCardWriteNotification";
     public static String EPURSE_TRANSACTION_AUTHORIZE_REQUEST = "EPurseTransactionAuthorize";
     public static String EPURSE_TRANSACTION_AUTHORIZE_RESPONSE ="EPurseTransactionAuthorizeResp";
+    public static String FILE_UPLOAD_NOTIFICATION_REQUEST = "FileUploadNotification";
+    public static String FILE_UPLOAD_NOTIFICATION_RESPONSE ="FileUploadNotificationResp";
 
 }
