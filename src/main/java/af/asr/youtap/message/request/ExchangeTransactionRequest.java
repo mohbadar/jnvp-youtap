@@ -222,7 +222,6 @@ public class ExchangeTransactionRequest {
     {
         LocalDate now = LocalDate.now();
         String date = String.format("%d/%d/%d", now.getDayOfMonth(), now.getMonthValue(), now.getYear());
-
         return  String.format("MessageType=%s,Date=%s,Time=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,StaffPin=%s,CustomerId=%s,PaymentType=%s,SourceCurrency=%s,DestinationCurrency=%s,WorkingCurrency=%s,WorkingAmount=%s,SendingAmountExclFees=%f,FxRate=%s,Fee=%s,CostToSend=%s,ReceivedAmount%f,ContactMsisdn=%s", this.messageType, date, "", this.transactionId, this.terminalId, this.merchantId, this.staffPin, this.customerId, this.paymentType, this.sourceCurrency, this.destinationCurrency, this.workingCurrency, this.workingAmount, this.sendingAmountExclFees, this.fxRate, this.fee, this.costToSend, this.receiveAmount, this.contactMSISDN );
     }
 

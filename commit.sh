@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - Exchange Rate Transaction Request Message"
+git commit -m "Youtap Library - Transaction Search Request Message"
