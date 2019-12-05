@@ -15,5 +15,19 @@ public class CustomerLoginRequest {
     private String terminalId;
     private String merchantId;
     private String transactionId;
+    /**
+     * Must be present so that the
+     * server can identify the
+     * Customer that logs in.
+     * Must contain the pin
+     *
+     * IMSI=8964200000000000000,MobMonPin=1234
+     */
     private String customerSearchData;
+
+
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerSearchData=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerSearchData);
+    }
 }
