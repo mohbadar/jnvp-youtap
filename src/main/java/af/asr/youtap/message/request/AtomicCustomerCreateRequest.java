@@ -31,6 +31,6 @@ public class AtomicCustomerCreateRequest {
 
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CustomerData=%s,IdData=%s,SubscriberAddress=%s", this.messageType, this.transactionId, this.terminalId, this.merchantId, this.customerData, this.idData, this.subscriberAddress);
     }
 }

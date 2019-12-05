@@ -42,4 +42,6 @@ public interface YoutapMessageTypes {
     public static String LINK_ACCOUNT_RESPONSE = "LinkAccountResp";
     public static String CUSTOMER_LOGIN_REQUEST ="CustomerLogin";
     public static String CUSTOMER_LOGIN_RESPONSE ="CustomerLoginResp";
+    public static String ATOMIC_CUSTOMER_CREATE_REQUEST = "AtomicCustomerCreate";
+    public static  String ATOMIC_CUSTOMER_CREATE_RESPONSE ="AtomicCustomerCreateResp";
 }
