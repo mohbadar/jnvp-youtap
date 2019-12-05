@@ -29,4 +29,8 @@ public class EPurseTransactionRequest {
      * 329C0E08715E3605DD12381CE0925C148218D0024048023244A20F008218BD024048023244F6012036B
      * AFD5BB13C81D2)),WorkingCurrency=NZD,WorkingAmount=1.10,Context=MEePurse
      */
+    public String getMessage()
+    {
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CardType=%s,PaymentType=%s,CustomerData=%s,CardData=%s,WorkingCurrency=%s,WorkingAmount=%f,Context=%s", this.messageType,this.transactionId, this.terminalId, this.merchantId, this.cardType, this.paymentType, this.customerData, this.cardData, this.workingCurrency, this.workingAmount,this.context);
+    }
 }
