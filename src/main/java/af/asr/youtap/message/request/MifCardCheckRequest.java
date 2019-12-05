@@ -25,7 +25,7 @@ public class MifCardCheckRequest {
      */
     public String getMessage()
     {
-        return String.format("");
+        return String.format("MessageType=%s,TransactionId=%s,TerminalId=%s,MerchantId=%s,CardType=%s,Context=%s,CustomerData=%s,CardData=%s", this.messageType, this.transactionId, this.terminalId,  this.merchantId, this.cardType, this.context, this.customerData, this.cardData);
     }
 
 }
