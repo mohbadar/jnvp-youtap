@@ -44,4 +44,6 @@ public interface YoutapMessageTypes {
     public static String CUSTOMER_LOGIN_RESPONSE ="CustomerLoginResp";
     public static String ATOMIC_CUSTOMER_CREATE_REQUEST = "AtomicCustomerCreate";
     public static  String ATOMIC_CUSTOMER_CREATE_RESPONSE ="AtomicCustomerCreateResp";
+    public  static String MIF_CARD_CHECK_REQUEST = "MifCardCheck";
+    public static  String MIF_CARD_CHECK_RESPONSE = "MifCardCheckResp";
 }

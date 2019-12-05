@@ -1,4 +1,4 @@
 
 
 git add .
-git commit -m "Youtap Library - AtomicCustomerCreateRequest Message"
+git commit -m "Youtap Library - MifCardCheckRequest Message"
